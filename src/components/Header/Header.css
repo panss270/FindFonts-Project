@@ -1,0 +1,274 @@
+
+.header {
+    display: flex; 
+    align-items: center;
+    padding: 15px 30px;
+    background: #FFFFFF;
+    width: 100%;
+    max-width: 100%;
+    top: 0;
+    position: sticky;
+    z-index: 100;     
+    pointer-events: all;   
+    overflow: visible;
+    
+}
+
+.nav-logo{
+  cursor:pointer;
+  display: flex;   
+  align-items: center;
+}
+
+.logo{
+    width: 125px;
+    height:95px;
+    display: block;     
+    object-fit: contain; 
+}
+
+/* ── Combobox wrapper ── */
+.search-box{
+    position: relative; 
+    min-width: 0;        
+    flex-shrink: 1;      
+    margin-left: 10px;
+    display: flex;
+    margin-left: 10px;
+    z-index: 200;
+    overflow: visible;
+}
+
+/* ── Input + ปุ่มแว่นอยู่ในกรอบเดียวกัน ── */
+.combobox-row {
+  display: flex;
+  align-items: center;
+  border: 1px solid #0D3B66;
+  border-radius: 6px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ── Input ── */
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px 10px;
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  color: #1E3A5F;
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+/* ── ปุ่มแว่นขยาย ── */
+.search-btn {
+  border: none;
+  background: none;
+  padding: 0 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0D3B66;
+  min-height: 38px;
+  transition: background 0.2s;
+}
+
+.search-btn:hover {
+  background: #f0f4f8;
+}
+
+/* ── Dropdown list ── */
+.font-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #0D3B66;
+  border-radius: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  z-index: 99999;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.13);
+  max-height: 300px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── แต่ละ item ── */
+.font-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.font-dropdown-item:hover {
+  background: #1E3A5F;
+}
+
+.font-dropdown-item:hover .font-icon {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.font-dropdown-item:hover .font-label {
+  color: #ffffff;
+}
+
+/* ── ตัวอักษรย่อ ── */
+.font-icon {
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid #1E3A5F;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1E3A5F;
+  flex-shrink: 0;
+}
+
+/* ── ชื่อฟอนต์ ── */
+.font-label {
+  font-size: 14px;
+  color: #1E3A5F;
+}
+
+/* ── loading / ไม่พบ ── */
+.font-dropdown-item.loading {
+  color: #9ca3af;
+  cursor: default;
+  font-size: 13px;
+}
+
+.font-dropdown-item.loading:hover {
+  background: none;
+}
+
+/* ----menu ไปขวา--------*/
+.menu{
+    display : flex;
+    gap: 20px;
+    align-items:center;
+    margin-left: auto;    
+}
+
+.popular-btn{
+  font-size: 16px;
+  font-weight: 500;  
+  color: #1E3A5F;
+  cursor: pointer;
+  padding: 5px 10px; 
+}
+
+.newfont-btn{
+  font-size: 16px;
+  font-weight: 500;
+  color: #1E3A5F;
+  cursor: pointer;
+  padding: 5px 10px; 
+}
+
+.home-btn{
+  font-size: 16px;
+  font-weight: 500;
+  color: #1E3A5F;
+  cursor: pointer;
+  padding: 5px 10px; 
+}
+
+/* เปลี่ยนสีตอน hover ค่อยๆ เปลี่ยนใน 0.3 วินาที */
+.popular-btn,
+.newfont-btn,
+.home-btn
+ {
+  transition: 0.3s;
+}
+
+/* เปลี่ยนสีตัวอักษรเป็นดำเมื่อ hover */
+.popular-btn:hover,
+.newfont-btn:hover ,
+.home-btn:hover{
+  color: #000;
+}
+
+/* เปิดโดยโทรศัพท์ */
+@media (max-width: 400px) {
+  .header {
+    flex-wrap: nowrap;
+    padding: 5px 15px;
+    gap: 8px;
+  }
+
+  .search-box {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .search-input {
+    font-size: 13px;
+  }
+  .font-dropdown {
+    position: absolute;   
+    top: calc(100% + 4px); 
+    left: 0;
+    right: 0;
+    width: auto;
+    max-height: 30vh;
+  }
+  .menu {
+    gap: 6px;
+    flex-shrink: 1;
+  }
+
+  .logo {
+    width: 70px;
+  }
+  .home-btn,
+  .popular-btn,
+  .newfont-btn {
+    font-size: 13px;
+    padding: 5px 4px;
+    white-space: nowrap;
+  }
+  .font-dropdown-item:active {
+    background: #1E3A5F;
+  }
+
+  .font-dropdown-item:active .font-icon {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+  }
+
+  .font-dropdown-item:active .font-label {
+    color: #ffffff;
+  }
+  
+  .font-label {
+    font-size: 12px;  
+  }
+
+  .font-icon {
+    width: 22px;      
+    height: 22px;
+    font-size: 11px; 
+  }
+
+  .font-dropdown-item {
+    padding: 7px 12px;  
+    gap: 8px;           
+  }
+}

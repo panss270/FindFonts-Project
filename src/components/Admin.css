@@ -1,0 +1,256 @@
+.admin-page{
+  background: #CDDAFD;
+  font-family: monospace;
+  min-height: 100vh;
+  color:#1E3A5F;
+}
+
+/*---------FileFilter Import ------ */
+.importer-wrapper {
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.importfont{
+  color:#1E3A5F;
+  margin-top:35px;
+}
+
+/* Radio mode selector */
+.import-mode-selector {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.import-mode-selector label + label {
+  margin-left: 15px;
+}
+
+.import-input-box {
+  width: 500px;
+  border: 2px dashed #82aade;
+  margin: 0 auto; 
+  padding: 20px 20px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.import-input-box:hover {
+  border-color: #1E3A5F;
+  background-color: rgba(30, 58, 95, 0.05);
+}
+
+.import-input-box.loading {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.drop-icon {
+  font-size: 40px;
+}
+
+.drop-text {
+  margin: 10px 0 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* " กำลังประมวลผล... 3/10" แสดงตอน upload */
+.loading-overlay {
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #c00;
+  margin-bottom: 10px;
+}
+
+/* -----warning------*/
+.duplicate-warning {
+  margin-top: 20px;
+  margin-left: auto;       
+  margin-right: auto;
+  width: 500px;           
+  padding: 15px;
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  text-align: left; 
+}
+
+/* list รายชื่อไฟล์ซ้ำ (scroll ได้) */
+.duplicate-warning ul {
+  margin: 8px 0 0 0;
+  padding-left: 40px;
+  max-height: 100px;       
+  overflow-y: auto;       
+  list-style: decimal;    
+}
+
+/* แต่ละรายชื่อสีน้ำตาล */
+.duplicate-warning li {
+  color: #856404;
+}
+
+/* ปุ่มปิด warning */
+.duplicate-warning button {
+  margin-top: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  display: block;     
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -----History Table---- */
+.success-table-card{
+  padding-top: 25px;
+}
+.success-table {
+  width: 60%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+
+.success-table thead tr {
+  background-color: #1E3A5F;
+  color: #fff;
+
+}
+
+.success-table td{
+  text-align: left;
+  padding: 8px 16px;  
+  border-bottom: 1px solid #eee;  
+}
+
+.success-table td:last-child {
+  text-align: center;
+}
+
+.success-table tr:last-child td {
+  border-bottom: none;  
+}
+/* ----ดูฟอนต์ทั้งหมดใน DB------ */
+.btn-view-all {
+  margin-left: 12px;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #1E3A5F;
+  background: transparent;
+  color: #1E3A5F;
+  cursor: pointer;
+}
+
+
+.btn-view-all:hover {
+  background-color: #1E3A5F;
+  color: #fff;
+}
+
+.history-card{
+  padding-top:20px;
+}
+
+.admin-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.addmin-modal-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 480px;
+  max-width: 90%;
+  max-height: 70vh;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.modal-box h3 {
+  margin: 0;
+  color: #1E3A5F;
+}
+
+/* รายชื่อฟอนต์ใน modal */
+.modal-font-list {
+  overflow-y: auto;
+  flex:1;
+  max-height: none;
+  padding-left: 20px;
+  margin: 0;
+  text-align: left;
+  color: #1E3A5F;
+  list-style: none;  
+  overflow-y: auto;
+  max-height: 200px; 
+}
+
+
+.modal-font-list li {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.btn-close-modal {
+  align-self: center;
+  padding: 6px 20px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1E3A5F;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-close-modal:hover {
+  background-color: #2d5a9e;
+}
+
+/* เปิดในโทรศัพท์ */
+@media (max-width: 600px) {
+  .importer-wrapper {
+    padding: 10px;
+  }
+
+  .import-input-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
+  .duplicate-warning {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .success-table {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .success-table td {
+    padding: 6px 8px;
+  }
+}

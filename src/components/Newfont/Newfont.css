@@ -1,0 +1,148 @@
+.newfont-container{
+    background-color: #1a365d;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;  
+    padding: 20px; 
+    min-height: 100vh;
+}
+.newfont-card {
+  background: #ffffff; 
+  border-radius: 12px;
+  width: 100%;
+  max-width: 1200px;
+  margin:30px 10px 10px 10px;
+}
+.newfont-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.font-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.newfont-label-input {
+  border: none !important;
+  background: transparent !important;
+  outline: none !important;
+  font-family: inherit; 
+  font-size: inherit;   
+  font-weight: 700;    
+  color: #333;        
+  width: 100%;         
+  margin: 0;
+  padding: 8px 8px 8px 20px; 
+  height: auto;
+  line-height: normal; 
+  box-shadow: none !important;
+}
+
+.newfont-label-input:hover{
+    background-color: rgba(0, 0, 0, 0.02) !important; 
+    cursor: text;
+}
+
+.newfont-label-input::placeholder {
+  color: #ccc;
+  font-weight: normal;
+}
+
+.newfont-content{
+  display: flex;             
+  gap: 20px;                 
+  padding: 10px 20px;
+  min-height: 500px;
+  max-height: 105vh;        
+  overflow-y: auto;       
+  flex-direction: column;
+  scrollbar-width: none;        
+  -ms-overflow-style: none;     
+}
+
+.newfont-content.loading {
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #94a3b8;
+}
+
+.newfont-text-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top:140px;
+}
+.newfont-text-content{
+  display:flex;
+  flex-direction: column;
+}
+.not-found-title {
+  color: #8EA3BF;           
+  font-size: 48px;       
+  font-weight: bold;
+  margin: 0 0 10px 0;        
+  text-align: left !important;
+}
+
+.not-found-desc {
+  color: #8EA3BF;         
+  font-size: 20px;
+  margin: 0;
+  text-align: left !important;
+}
+
+.comming-icon{
+    padding-top: 15px;
+    padding-left: 50px;
+    width:150px;
+}
+
+/* ในโทรศัพท์ */
+@media (max-width: 600px) {
+  .newfont-container {
+    padding: 10px;
+  }
+
+  .newfont-card {
+    margin-top: 20px;
+  }
+
+  .newfont-content {
+    max-height: none;
+    padding: 10px;
+  }
+  .newfont-text-content{
+    display:flex;
+    flex-direction: column;
+  }
+  .popular-text-group {
+    margin-top:10px;
+    flex-direction: column;  
+  }
+  .not-found-title {
+     font-size: 16px;
+    text-align: center !important;
+  }
+
+  .not-found-desc {
+    font-size: 10px;
+    text-align: center !important;
+  }
+
+  .comming-icon {
+    padding-top: 30px;
+    padding-left: 0;
+    display: block;
+    margin: 0 auto;
+  }
+}
