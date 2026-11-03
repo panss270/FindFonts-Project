@@ -31,7 +31,6 @@ app.add_middleware(
 # ---- Endpoint: verify key Admin page ----
 @app.post("/admin")
 def admin(key: str = Form(...)):
-    print(f"key = {key}")
     if key != "2026":
         raise HTTPException(status_code=403, detail="Access denied")
     return {"ok": True}
