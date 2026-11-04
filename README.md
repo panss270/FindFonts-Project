@@ -1,21 +1,21 @@
-# ชื่อโปรเจกต์ เว็บแอปพลิเคชันค้นหาฟอนต์จากภาพโดยใช้เทคโนโลยีปัญญาประดิษฐ์
+# ชื่อโปรเจกต์ เว็บแอปพลิเคชันค้นหาฟอนต์จากภาพโดยใช้เทคโนโลยีปัญญาประดิษฐ์ (Web Application for Font Search from Images)
 
 เป็นระบบที่พัฒนาขึ้นโดยมีความสามารถในการค้นหาฟอนต์จากภาพ ระบบรองรับการค้นหาฟอนต์ทั้งภาษาไทยและภาษาอังกฤษจำนวน 33 ฟอนต์จากเว็บ **https://fonts.google.com/** โดยสามารถรับภาพที่ผู้ใช้งานอัปโหลดและวิเคราะห์ลักษณะของฟอนต์ในภาพผ่านโมเดลปัญญาประดิษฐ์ที่ได้รับการพัฒนาขึ้น จากนั้นแสดงรายการฟอนต์ที่มีความคล้ายคลึงกันพร้อมค่าเปอร์เซ็นต์ความคล้ายของแต่ละฟอนต์ เพื่อให้ผู้ใช้งานสามารถเปรียบเทียบได้อย่างชัดเจน
 
 
 ### Live Demo
-- ทดลองใช้งานระบบจริงได้ที่: **https://findfonts.vercel.app/Detail**
-- ไฟล์รูปภาพสำหรับทดสอบ: **https://drive.google.com/drive/folders/1VyWYcQXBN86dvVMhgu7mxG5Zpzmr6s43?usp=sharing**
+- ทดลองใช้งานระบบจริงได้ที่ **https://findfonts.vercel.app/Detail**
+- ไฟล์รูปภาพสำหรับทดสอบ **https://drive.google.com/drive/folders/1VyWYcQXBN86dvVMhgu7mxG5Zpzmr6s43?usp=sharing**
 
 
 
 ### Languages & Frameworks
  
-- **Frontend:** [React, HTML/CSS, JavaScript]
-- **Backend:** [FastAPI (Python), RESTful API Architecture, Node.js]
-- **Database:** [PostgreSQL, Supabase]
-- **Deep Learning:** [Convolutional Neural Network ]
-- **Model:** [EfficientNet ]
+- **Frontend:** React, HTML/CSS, JavaScript
+- **Backend:** FastAPI (Python), RESTful API Architecture, Node.js
+- **Database:** PostgreSQL, Supabase
+- **Deep Learning:** Convolutional Neural Network 
+- **Model:** EfficientNet 
 
 
 ### Tools & Deployment
